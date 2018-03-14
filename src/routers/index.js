@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   // mode: 'hash|history|abstract',
-  // base: '/',
+  base: '/app/',
   // linkActiveClass: 'router-link-active',
   // scrollBehavior: fn
   routes

@@ -79,6 +79,7 @@ var baseConfig = {
   resolve: {
 		extensions: ['.js', '.vue', '.json'],
     alias: {
+      'vue$': 'vue/dist/vue.esm.js',
       static: path.resolve(__dirname, '../static'),
       '@': path.resolve(__dirname, '../src'),
       utils: path.resolve(__dirname, '../src/utils'),

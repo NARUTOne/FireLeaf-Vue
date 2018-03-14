@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    hello, welcome !
-    Fire Leaf Vue Scaffold !
+    <h3>hello, world ! </h3>
+    <p>welcome! Fire Leaf Vue Scaffold !</p>
   </div>
 </template>
 

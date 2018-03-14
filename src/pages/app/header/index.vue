@@ -1,16 +1,16 @@
 <template>
-  <div class="header">
-    <router-link class='header-logo'>
+  <header class="header">
+    <router-link to='/' class='header-logo'>
       system name
     </router-link>
-  </div>
+  </header>
 </template>
 
 <script>
   export default {
     name: 'Header',
     data: () => {
-      
+      return {}
     }
   };
 </script>
