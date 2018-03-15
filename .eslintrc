@@ -32,6 +32,7 @@
 		"comma-spacing": [2],
 		"global-require": [1],
 		"no-console": "off",
-    "generator-star-spacing": "off"
+		"generator-star-spacing": "off",
+		"vue/no-parsing-error": [2, { "x-invalid-end-tag": false }]
 	}
 }

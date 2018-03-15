@@ -4,6 +4,7 @@
 :rocket: v.4.1.1
 
 [webpack blog](https://medium.com/webpack/webpack-4-beta-try-it-today-6b1d27d7d7e2)
+[webpack v4 dov](https://github.com/webpack/webpack.js.org/issues/1706)
 
 [Webpack 4 不完全迁移指北](https://github.com/dwqs/blog/issues/60) 
 

@@ -7,7 +7,7 @@
  - vue(2.5.16): https://cn.vuejs.org/index.html
  - vue-router(3.0.1): https://router.vuejs.org/zh-cn/
  - vuex
- - iview (默认)
+ - iview (默认): https://www.iviewui.com/docs/guide/start
 
 ## record process
 > 简单记录下搭建过程
@@ -34,6 +34,33 @@ $ ...
 
 ### 脚手架目录
 
+```
+|-- config                             // webpack、vue配置
+|-- md                                 // 脚手架文档
+|-- script                             // 项目构建, 环境path
+|-- src                                // 项目源码
+|   |-- components                     // 业务组件
+|   |-- mock                           // 开发数据源
+|   |-- pages                          // 业务界面
+|       |-- app                        // 单页入口（布局）
+|       |-- home                       // 默认首页
+|       |-- notFound                   // 404页
+|   |-- routers                        // 路由配置
+|   |-- template                       // vue单页组件模板（简易）
+|   |-- utils                          // 公共集合（配置，样式，工具）
+|       |-- style                      // 公共样式（less 变量）
+|       |-- config                     // 项目业务配置
+|       |-- tools                      // 工具方法
+|   |-- index                          // 项目入口
+|-- static                             // 项目静态文件
+|-- .babelrc                           // babel配置
+|-- .editorconfig                      // 定义代码格式
+|-- .eslintrc                          // eslint代码规范
+|-- .stylelintrc                       // stylelint样式规范
+|-- package.json                       // 项目基本信息
+|-- template.html                      // html 模板
+
+```
 
 ### 规范
 

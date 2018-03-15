@@ -11,10 +11,13 @@
 </script>
 
 <style lang="less" scoped>
+  @import '~utils/style/variables.less';
   .footer {
     padding: 10px;
     line-height: 23px;
     text-align: center;
+    color: @footer-text-color;
+    background-color: @footer-bg;
   }
 </style>
 

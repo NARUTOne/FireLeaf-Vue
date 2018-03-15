@@ -1,16 +1,35 @@
 <template>
   <header class="header">
-    <router-link to='/' class='header-logo'>
-      system name
-    </router-link>
+    <Row :gutter="16">
+      <Col :xs="12" :sm="12" :md="6" :lg="6" >
+        <router-link to='/' class='header-logo'>
+          system name
+        </router-link>
+      </Col>
+      <Col :xs="0" :sm="0" :md="12" :lg="12">
+        <div class="t-center default-color header-title">FireLeaf-Vue-Scaffold</div>
+      </Col>
+      <Col :xs="12" :sm="12" :md="6" :lg="6">
+        <div class="t-right">
+          <Avatar class="default-bg" icon="person" />&nbsp; NARUTOne
+        </div>        
+      </Col>
+    </Row>
   </header>
 </template>
 
 <script>
+  import {Row, Col, Avatar } from 'iview';
+
   export default {
     name: 'Header',
     data: () => {
-      return {}
+      return {};
+    },
+    components: {
+      Row,
+      Col,
+      Avatar 
     }
   };
 </script>
@@ -34,6 +53,10 @@
       font-weight: 600;
       background: url('~static/img/logo.png') left center no-repeat;
       background-size: 42px 42px;
+    }
+    .header-title {
+      font-size: 18px;
+      font-weight: 600;
     }
   }
 </style>

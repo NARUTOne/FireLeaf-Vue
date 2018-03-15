@@ -13,9 +13,9 @@ var webpackConfig = require('../config/webpack.prod.config.js');
 process.env.NODE_ENV = 'production';
 
 var spinner = ora('building for production...');
-spinner.start();
+spinner.start(); 
  
-rm(path.join(path.resolve(__dirname), '..', PATHS.build.buildPath), err => {
+rm(path.join(PATHS.build.buildPath), err => {
   if (err) throw err;
   console.log(chalk.cyan('build step 1'));
   webpack(webpackConfig, function (err, stats) {
