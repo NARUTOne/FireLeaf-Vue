@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <h1>FLV</h1>
     <h2 class='home-hi'><Spin size="large" fix/> hello, world ! </h2>
     <p class="home-text"><Icon type='ionic' /> &nbsp; &nbsp;welcome! Fire Leaf Vue Scaffold !</p>
   </div>
@@ -22,7 +23,7 @@
 
   .home {
     text-align: center;
-    padding-top: 16%;
+    padding-top: 15%;
     .home-hi {
       position: relative;
       font-size: 30px;

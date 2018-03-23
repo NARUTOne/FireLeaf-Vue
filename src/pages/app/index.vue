@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="wrapper">
-      <Header />
+      <Header v-show="isHeader"/>
       <Body><router-view></router-view></Body>
       <Footer />
     </div>    
@@ -11,13 +11,47 @@
   import Header from './header/';
   import Body from './body/';
   import Footer from './footer/';
-
+  import auth from 'utils/auth';
+  
   export default {
     name: 'App',
     components: {
       Header,
       Body,
       Footer
+    },
+    data: function() {
+      return {
+        isHeader: true
+      };
+    },
+    created: function() {
+      this.checkRouter();
+    },
+    mounted: function() {
+      if(auth && auth.isLoginIn()) {
+        const data = auth.user;
+        this.$store.commit('loginSuccess', data);
+      }
+      else {
+        this.$router.push('/login');
+      }
+    },
+    watch: {
+      // 如果路由有变化，会再次执行该方法
+      '$route': 'checkRouter'
+    },
+    methods: {
+      checkRouter() {
+        const path = this.$route.path;
+        // console.log(path);
+        if (path === '/login' || path === '/*') {
+          this.isHeader = false;
+        }
+        else {
+          this.isHeader = true;
+        }
+      }
     }
   };
 </script>

@@ -6,8 +6,10 @@
  - webpack(4.1.1) : https://doc.webpack-china.org/
  - vue(2.5.16): https://cn.vuejs.org/index.html
  - vue-router(3.0.1): https://router.vuejs.org/zh-cn/
- - vuex
+ - vuex: https://vuex.vuejs.org/zh-cn/installation.html
  - iview (默认): https://www.iviewui.com/docs/guide/start
+ - axios
+ - mock
 
 ## record process
 > 简单记录下搭建过程
@@ -47,6 +49,11 @@ $ ...
 |       |-- notFound                   // 404页
 |   |-- routers                        // 路由配置
 |   |-- template                       // vue单页组件模板（简易）
+|   |store
+|       |-- index.js                   // 组装模块并导出 store 
+|       |-- actions.js                 // 根级别的 action
+|       |-- mutations.js               // 根级别的 mutation
+|       |-- modules                    // 模块集
 |   |-- utils                          // 公共集合（配置，样式，工具）
 |       |-- style                      // 公共样式（less 变量）
 |       |-- config                     // 项目业务配置
