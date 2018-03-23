@@ -4,12 +4,22 @@ const loginModule = {
   state: {
     user: {}
   },
-  getters: {},
+  getters: {
+    getUser: state => {
+      return state.user;
+    }
+  },
   mutations: {
-    loginSuccess (state, payload) {
+    loginSuccess(state, payload) {
+      // console.log(payload);
       const user = Object.assign({}, payload);
       state.user = user;
       auth.register(user);
+    },
+    loginOut(state) {
+      console.log(state);
+      state.user = {};
+      auth.destroy();
     }
   },
   actions: {}

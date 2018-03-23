@@ -29,6 +29,7 @@
       this.checkRouter();
     },
     mounted: function() {
+      // console.log(this.$store.state.login.state);
       if(auth && auth.isLoginIn()) {
         const data = auth.user;
         this.$store.commit('loginSuccess', data);

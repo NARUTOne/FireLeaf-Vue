@@ -10,8 +10,10 @@
         <div class="t-center default-color header-title">FireLeaf-Vue-Scaffold</div>
       </Col>
       <Col :xs="12" :sm="12" :md="6" :lg="6">
-        <div class="t-right">
-          <Avatar class="default-bg" icon="person" />&nbsp; NARUTOne
+        <div class="t-right header-user">
+          <Avatar class="default-bg" icon="person" />&nbsp; {{user ? user.userName : ''}} &nbsp;&nbsp;
+          <Icon type='log-out' v-if="isLogin" class='header-log-icon' title='登出' @click.native="handleLoginOut()"/>
+          <Icon type='log-in' v-else class='header-log-icon' title='登录' @click.native="handleLogin()"/>
         </div>        
       </Col>
     </Row>
@@ -19,17 +21,41 @@
 </template>
 
 <script>
-  import {Row, Col, Avatar } from 'iview';
+  import { mapGetters, mapMutations } from 'vuex';
+  import {Row, Col, Avatar, Icon } from 'iview';
 
   export default {
     name: 'Header',
-    data: () => {
-      return {};
+    data() {
+      return {
+       
+      };
     },
     components: {
       Row,
       Col,
-      Avatar 
+      Avatar,
+      Icon
+    },
+    computed: {
+      ...mapGetters({
+        user: 'getUser',
+      }),
+      isLogin () {
+        return this.user && this.user.userName;
+      }
+    },
+    methods: {
+      handleLogin() {
+        this.handleLoginOut();
+      },
+      handleLoginOut() {
+        this.loginOut();
+        this.$router.push('/login');
+      },
+      ...mapMutations([
+        'loginOut'
+      ])
     }
   };
 </script>
@@ -58,6 +84,13 @@
       font-size: 18px;
       font-weight: 600;
     }
+    .header-user {
+      font-size: 16px;
+      .header-log-icon {
+        cursor: pointer;
+      }
+    }
+    
   }
 </style>
 

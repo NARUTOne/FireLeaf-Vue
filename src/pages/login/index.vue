@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 import {Row, Col, Form, FormItem, Input, Icon, Button} from 'iview';
 import {systemName} from 'utils/config';
 
@@ -78,7 +79,7 @@ export default {
           }).then((data) => {
             this.$Message.success('Success!');
             
-            this.$store.commit('loginSuccess', data);
+            this.loginSuccess(data);
             this.$router.push('/home');
           }).catch((err) => {
             this.$Message.error(err || 'Fail!');
@@ -88,8 +89,12 @@ export default {
           this.$Message.error('Fail!');
         }
       });
-    }
-  }
+    },
+    ...mapMutations([
+      'loginSuccess'
+    ])
+  },
+
 };
 </script>
 
