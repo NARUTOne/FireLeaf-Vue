@@ -19,7 +19,7 @@
                 </Input>
               </FormItem>
               <FormItem class='t-center'>
-                <Button type="primary" html-type='submit' @click="handleSubmit('form')" long>登录</Button>
+                <Button type="primary" html-type='submit' :loading="loading"  @click="handleSubmit('form')" long>登录</Button>
               </FormItem>
             </Form>
           </div>
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
+import { mapActions } from 'vuex';
 import {Row, Col, Form, FormItem, Input, Icon, Button} from 'iview';
 import {systemName} from 'utils/config';
 
@@ -43,6 +43,7 @@ export default {
   data () {
     return {
       systemName,
+      loading: false,
       formData: {
         userName: '',
         password: ''
@@ -67,9 +68,9 @@ export default {
     handleSubmit(name) {
       this.$refs[name].validate((valid) => {
         if (valid) {
-          const {userName, password} = this.formData;
+          const {userName} = this.formData;
           new Promise((resolve, reject) => {
-            if(userName == 'admin' && password == 'admin123') {
+            if(userName == 'admin' || userName == 'NARUTOne') {
               resolve(this.formData);
             }
             else {
@@ -77,10 +78,15 @@ export default {
               reject(err);
             }
           }).then((data) => {
-            this.$Message.success('Success!');
+            this.loading = true;
+            this.toLogin(data).then(() => {
+              this.loading = false;
+              this.$Message.success('Success!');
+              this.$router.push('/home');
+            }).catch(() => {
+              this.loading = false;
+            });
             
-            this.loginSuccess(data);
-            this.$router.push('/home');
           }).catch((err) => {
             this.$Message.error(err || 'Fail!');
           });
@@ -90,8 +96,8 @@ export default {
         }
       });
     },
-    ...mapMutations([
-      'loginSuccess'
+    ...mapActions([
+      'toLogin'
     ])
   },
 

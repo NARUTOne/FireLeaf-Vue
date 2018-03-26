@@ -216,6 +216,15 @@ function arrayTreeCallBack(treeNodes, Fn, options) {
   return treeMap(treeNodes);
 }
 
+function param2Obj(paramsString) {
+  const search = paramsString;
+  if (!search) {
+    return {};
+  }
+  return JSON.parse('{"' + decodeURIComponent(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+}
+
+
 const util = function () {
   this.name = 'tools';
 };
@@ -234,7 +243,8 @@ util.prototype = {
   toRound,
   rangeDate,
   xhrSetData,
-  arrayTreeCallBack
+  arrayTreeCallBack,
+  param2Obj
 };
 
 const tools = new util();

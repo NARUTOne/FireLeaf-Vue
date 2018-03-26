@@ -11,7 +11,7 @@
       </Col>
       <Col :xs="12" :sm="12" :md="6" :lg="6">
         <div class="t-right header-user">
-          <Avatar class="default-bg" icon="person" />&nbsp; {{user ? user.userName : ''}} &nbsp;&nbsp;
+          <Avatar class="default-bg" icon="person" />&nbsp; {{user ? user.username : ''}} &nbsp;&nbsp;
           <Icon type='log-out' v-if="isLogin" class='header-log-icon' title='登出' @click.native="handleLoginOut()"/>
           <Icon type='log-in' v-else class='header-log-icon' title='登录' @click.native="handleLogin()"/>
         </div>        
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-  import { mapGetters, mapMutations } from 'vuex';
+  import { mapGetters, mapActions } from 'vuex';
   import {Row, Col, Avatar, Icon } from 'iview';
 
   export default {
@@ -50,11 +50,16 @@
         this.handleLoginOut();
       },
       handleLoginOut() {
-        this.loginOut();
-        this.$router.push('/login');
+        this.toLogout().then(() => {
+          this.$Message.success('success!');
+          this.$router.push('/login');
+        }).catch(() => {
+          this.$Message.error('error!');
+        });
+        
       },
-      ...mapMutations([
-        'loginOut'
+      ...mapActions([
+        'toLogout'
       ])
     }
   };

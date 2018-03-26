@@ -5,7 +5,7 @@ var apiBaseUrl = '/';
 const PROJECT_NAME = 'app';
 
 if(process.env.NODE_ENV == 'development') {
-  apiBaseUrl = '/';
+  apiBaseUrl = ' https://easy-mock.com/mock/5ab8d1653838ca14983dc0ee/FireLeaf/Vue/';
 }
 
 var NAV_LIST = [{

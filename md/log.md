@@ -2,6 +2,13 @@
 
 > :fire: FireLeaf-vue-scaffold 
 
+## 0.0.3 
+
+`2018-03-26`
+
+- 添加 `axios` 、 `mockjs` 
+- 配置mockserver： [FireLeaf-Vue-Scaffold](https://easy-mock.com/project/5ab8d1653838ca14983dc0ee)
+
 ## 0.0.2 
 
 `2018-03-23`

@@ -1,0 +1,7 @@
+/**
+ * store getters
+ */
+
+ export {
+
+ };

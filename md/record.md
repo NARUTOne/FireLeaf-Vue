@@ -8,8 +8,8 @@
  - vue-router(3.0.1): https://router.vuejs.org/zh-cn/
  - vuex: https://vuex.vuejs.org/zh-cn/installation.html
  - iview (默认): https://www.iviewui.com/docs/guide/start
- - axios
- - mock
+ - axios: https://github.com/axios/axios
+ - mockjs: http://mockjs.com/
 
 ## record process
 > 简单记录下搭建过程
@@ -33,6 +33,7 @@ $ ...
 - [webpack 配置](./webpack.md)
 - [babel](./babel.md)
 - [server](./server.md)
+- [mockjs](./mock.md)
 
 ### 脚手架目录
 

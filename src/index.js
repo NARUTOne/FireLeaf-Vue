@@ -9,6 +9,9 @@ import store from './store/';
 import {Message} from 'iview';
 import 'iview/dist/styles/iview.css';
 
+import 'utils/xhr_config';
+import './mock/'; // simulation data
+
 Vue.config.productionTip = false;
 
 // Vue.use(iView);
