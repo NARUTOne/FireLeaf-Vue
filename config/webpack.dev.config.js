@@ -22,7 +22,7 @@ module.exports = merge.smart(baseConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: PATHS.dev.cssSourceMap, usePostCSS: true })
   },
-	devtool: '#cheap-module-eval-source-map',
+	devtool: PATHS.dev.devtool,
 	performance: {
 		hints: false
 	},

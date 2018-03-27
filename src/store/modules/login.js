@@ -3,7 +3,7 @@ import {toLogin, toLogout} from '@/api/login';
 
 const loginModule = {
   state: {
-    user: {}
+    user: null
   },
   getters: {
     getUser: state => {
@@ -27,10 +27,10 @@ const loginModule = {
   actions: {
     toLogin({commit}, payload) {
       const user = Object.assign({}, payload);
-
+      
       return new Promise((resolve, reject) => {
         toLogin(user).then(response => {
-          console.log(response);
+          // console.log(response);
           const data = response.data;
           commit('LOGIN_SUCCESS', data);
           resolve();

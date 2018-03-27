@@ -3,8 +3,8 @@ import loginAPI from './login';
 
 
 // login
-Mock.mock(/\/login\/login/, 'post', loginAPI.toLogin);
-Mock.mock(/\/login\/logout/, 'GET', loginAPI.toLogout);
+Mock.mock(/\/api\/login/, 'post', loginAPI.toLogin);
+Mock.mock(/\/api\/logout/, 'GET', loginAPI.toLogout);
 
 
 export default Mock;

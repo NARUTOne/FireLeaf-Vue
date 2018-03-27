@@ -10,13 +10,14 @@ module.exports = {
   dev: {
     assetsPublicPath: '/', // 资源path
     assetsSubDirectory: 'static', // 项目资源目录
-    cssSourceMap: false
+    cssSourceMap: false,
+    devtool: 'eval-source-map'
   },
   build: {
     buildPath: path.resolve(__dirname, '../dist'), // 打包文件path 
     assetsPublicPath: '/', // 资源path
     assetsSubDirectory: 'static', // 项目资源目录
-    roductionSourceMap: true,
+    productionSourceMap: true,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
   },  

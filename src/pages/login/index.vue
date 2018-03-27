@@ -7,19 +7,19 @@
             {{systemName}}
           </div>
           <div class="login-form">
-            <Form :model="formData" :rules="formRule" ref='form'>
+            <Form :model="formData" :rules="formRule" ref='form' @submit.native.prevent="handleSubmit('form')">
               <FormItem prop="userName">
                 <Input type="text" v-model="formData.userName" placeholder="UserName">
                   <Icon type="ios-person-outline" slot="prepend"></Icon>
                 </Input>
               </FormItem>
               <FormItem prop="password">
-                <Input type="password" v-model="formData.password" placeholder="Password">
+                <Input type="password" v-model="formData.password" placeholder="Password" >
                   <Icon type="ios-locked-outline" slot="prepend"></Icon>
                 </Input>
               </FormItem>
               <FormItem class='t-center'>
-                <Button type="primary" html-type='submit' :loading="loading"  @click="handleSubmit('form')" long>登录</Button>
+                <Button type="primary" html-type='submit' :loading="loading" long>登录</Button>
               </FormItem>
             </Form>
           </div>
@@ -66,10 +66,12 @@ export default {
   },
   methods: {
     handleSubmit(name) {
+      
       this.$refs[name].validate((valid) => {
         if (valid) {
           const {userName} = this.formData;
           new Promise((resolve, reject) => {
+            
             if(userName == 'admin' || userName == 'NARUTOne') {
               resolve(this.formData);
             }
@@ -79,9 +81,11 @@ export default {
             }
           }).then((data) => {
             this.loading = true;
+            
             this.toLogin(data).then(() => {
               this.loading = false;
-              this.$Message.success('Success!');
+              
+              this.$Message.success('Success, welcome!');
               this.$router.push('/home');
             }).catch(() => {
               this.loading = false;

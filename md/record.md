@@ -42,6 +42,7 @@ $ ...
 |-- md                                 // 脚手架文档
 |-- script                             // 项目构建, 环境path
 |-- src                                // 项目源码
+|   |-- api                            // request
 |   |-- components                     // 业务组件
 |   |-- mock                           // 开发数据源
 |   |-- pages                          // 业务界面

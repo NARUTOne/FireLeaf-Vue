@@ -5,8 +5,11 @@
 import xhr from 'utils/xhr';
 
 export function toLogin (data) {
+  // console.log(data);
+  
+
   return xhr({
-    url: 'login/login',
+    url: 'api/login',
     type: 'POST',
     data
   });
@@ -14,7 +17,7 @@ export function toLogin (data) {
 
 export function toLogout () {
   return xhr({
-    url: 'login/logout',
+    url: 'api/logout',
     type: 'GET'
   });
 }
