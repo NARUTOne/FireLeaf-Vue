@@ -31,10 +31,11 @@ export default {
 
     return {
       code: 200,
-      data: userMap[userName]
+      data: userMap[userName],
+      msg: 'success, welcome !'
     };
   },
   toLogout: () => {
-    return {code: 200, data: {}, msg: 'success'};
+    return {code: 200, data: {}, msg: 'success, thanks!'};
   }
 };

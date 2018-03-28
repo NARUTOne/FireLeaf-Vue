@@ -75,3 +75,18 @@ $ ...
 
 [eslint + stylelint](./codeStyle.md)
 
+**api规范**
+> 遵循RESTful规范
+
+- [模拟接口](https://easy-mock.com/project/5ab8d1653838ca14983dc0ee)
+
+返回结构
+
+```
+{
+  "data": {}, // 返回数据
+  "code": 200, // code状态码
+  "msg": "success" // 返回信息
+}
+```
+

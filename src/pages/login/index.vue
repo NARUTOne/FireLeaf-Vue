@@ -82,10 +82,10 @@ export default {
           }).then((data) => {
             this.loading = true;
             
-            this.toLogin(data).then(() => {
+            this.toLogin(data).then((msg) => {
               this.loading = false;
               
-              this.$Message.success('Success, welcome!');
+              this.$Message.success(msg || 'Success, welcome!');
               this.$router.push('/home');
             }).catch(() => {
               this.loading = false;

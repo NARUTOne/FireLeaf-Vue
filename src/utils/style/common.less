@@ -23,6 +23,15 @@
   opacity: .8;
 }
 
+// base css
+
+* {
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   margin-top: 1.3em;
@@ -44,16 +53,9 @@ h3 {
 a {
   text-decoration: none;
   &:hover {
-    color: @link-hover-color;
+    color: @flv-link-hover-color;
     text-decoration: none;
   }
-}
-
-* {
-	margin: 0;
-	padding: 0;
-  box-sizing: border-box;
-  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -73,54 +75,49 @@ ul, li {
   list-style: none;
 }
 
-// wz-css
-
-.text-overflow {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+// color
 
 .default-color {
-  color: @default-color;
+  color: @flv-default-color;
 }
 
 .warn-color {
-  color: @warn-color;
+  color: @flv-warn-color;
 }
 
 .error-color {
-  color: @error-color;
+  color: @flv-error-color;
 }
 
 .success-color {
-  color: @success-color;
+  color: @flv-success-color;
 }
 
 .disabled-color {
-  color: @disabled-color;
+  color: @flv-disabled-color;
 }
 
 .default-bg {
-  background-color: @default-color;
+  background-color: @flv-default-color;
   color: #fff;
 }
 
 .warn-bg {
-  background-color: @warn-color;
+  background-color: @flv-warn-color;
   color: #fff;
 }
 
 .error-bg {
-  background-color: @error-color;
+  background-color: @flv-error-color;
   color: #fff;
 }
 
 .success-bg {
-  background-color: @success-color;
+  background-color: @flv-success-color;
   color: #fff;
 }
 
+// 布局
 .t-center {
   text-align: center;
 }
@@ -145,6 +142,13 @@ ul, li {
     display:table;
     clear:both;
   }
+}
+
+// 显隐
+.text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .hide {
@@ -172,27 +176,25 @@ ul, li {
 }
 
 .show-opacity {
-  opacity: 1 !important;
+  opacity: 1;
 }
 
 .hide-opacity {
-  opacity: 0 !important;
+  opacity: 0;
 }
 
 .inline-div {
-  display: inline-block !important;
-  margin: 0 8px !important;
+  display: inline-block ;
 }
 
-.a-btn {
-  padding: 8px 12px;
-  border-radius: 5px;
+// 距离， 大小
+.chart-box {
+  height: @flv-base-size * 3;
 }
 
-.bold {
-  font-weight: 600;
-}
+// 个性化
 
+// 提示框
 .tooltips{
   position: absolute;
   max-width: 200px;
@@ -212,28 +214,7 @@ ul, li {
   z-index:4;
 }
 
-.mg-r-1 {
-  margin-right: 8px;
-}
-
-.chart-box {
-  height: 300px;
-}
-
-.text-overflow {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.icon {
-  padding: 0 8px;
-}
-
-.pointer {
-  cursor: pointer;
-}
-
+// 表单校验
 .prop-name--required {
   position: relative;
   padding-left: 8px;
@@ -242,10 +223,9 @@ ul, li {
     position: absolute;
     left: 0;
     right: 0;
-    color: @error-color;
+    color: @flv-error-color;
   }
 }
-
 .error-border {
-  border: 1px solid @error-color;
+  border: 1px solid @flv-error-color;
 }

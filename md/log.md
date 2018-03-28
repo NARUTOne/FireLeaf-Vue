@@ -2,6 +2,15 @@
 
 > :fire: FireLeaf-vue-scaffold 
 
+## 0.0.4
+
+`2018-03-28`
+
+- 添加主题配置 `utils/style/theme`, 参考 https://www.iviewui.com/docs/guide/theme
+- 添加业务icon:  http://iconfont.cn
+  - 添加 `FLIcon`组件，修改业务图标时，注意修改其下的less样式
+  - 参考 [本地化定制icon组件](https://www.jianshu.com/p/e6daa62c56fd)
+
 ## 0.0.3 
 
 `2018-03-26`

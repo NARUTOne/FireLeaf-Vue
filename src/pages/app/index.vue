@@ -30,7 +30,7 @@
     },
     mounted: function() {
       // console.log(this.$store.state.login.state);
-      if(auth && auth.isLoginIn()) {
+      if(auth.user && auth.isLoginIn()) {
         const data = auth.user;
         this.$store.commit('LOGIN_SUCCESS', data);
       }

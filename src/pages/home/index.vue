@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>FLV</h1>
+    <h1>FLV &nbsp; <FLIcon type='travel'/></h1>
     <h2 class='home-hi'><Spin size="large" fix/> hello, world ! </h2>
     <p class="home-text"><Icon type='ionic' /> &nbsp; &nbsp;welcome! Fire Leaf Vue Scaffold !</p>
   </div>
@@ -8,12 +8,14 @@
 
 <script>
   import { Icon, Spin } from 'iview';
+  import { FLIcon } from 'components';
 
   export default {
     name: 'Home',
     components: {
       Icon,
-      Spin
+      Spin,
+      FLIcon
     }
   };
 </script>
@@ -27,11 +29,11 @@
     .home-hi {
       position: relative;
       font-size: 30px;
-      color: @warn-color;
+      color: @flv-warn-color;
     }
     .home-text {
       font-size: 16px;
-      color: @default-color;
+      color: @flv-default-color;
     }
   }
 </style>

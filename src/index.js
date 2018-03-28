@@ -8,6 +8,7 @@ import store from './store/';
 // import iView from 'iview';
 import {Message} from 'iview';
 import 'iview/dist/styles/iview.css';
+import 'utils/style/theme.less';
 
 import 'utils/xhr_config';
 import './mock/'; // simulation data

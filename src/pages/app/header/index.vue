@@ -50,8 +50,8 @@
         this.handleLoginOut();
       },
       handleLoginOut() {
-        this.toLogout().then(() => {
-          this.$Message.success('success!');
+        this.toLogout().then((msg) => {
+          this.$Message.success(msg || 'success!');
           this.$router.push('/login');
         }).catch(() => {
           this.$Message.error('error!');
@@ -72,7 +72,7 @@
     height: 60px;
     padding: 8px 16px;
     line-height: 42px;
-    box-shadow: 0 2px 8px @shadow-color;
+    box-shadow: 0 2px 8px @flv-shadow-color;
     transition: all 0.3s;
     .header-logo {
       display: block;

@@ -2,41 +2,48 @@
 * less 全局变量
 */
 
-@default-color:       #48a9ee;
-@success-color:       #34a853;
-@warn-color:       #fbbc05;
-@error-color:       #ea4335;
-@disabled-color:     #e5e5e5;
-@gray-color:      #e7e7e7;
-@dark-bg:  #001529;
-@dark: rgba(0, 0, 0, .8);
-@light: rgba(255, 255, 255, 1);
+//icon
+@flv-my-icon-url: '~static/icon/iconfont';
+// color
+@flv-default-color:       #48a9ee;
+@flv-success-color:       #34a853;
+@flv-warn-color:       #fbbc05;
+@flv-error-color:       #ea4335;
+@flv-disabled-color:     #e5e5e5;
+@flv-gray-color:      #e7e7e7;
+@flv-dark-bg:  #001529;
+@flv-dark: rgba(0, 0, 0, .8);
+@flv-light: rgba(255, 255, 255, 1);
 
 // 文字背景
-@text-bg:       #cce8ff;
-@link-hover-color: @warn-color;
+@flv-text-bg:       #cce8ff;
+@flv-link-hover-color: @flv-warn-color;
 
 // 渐变色
-@grad-color:    fade(@default-color, 50%);
-@grad-m-color:  fade(@default-color, 80%);
+@flv-grad-color:    fade(@flv-default-color, 50%);
+@flv-grad-m-color:  fade(@flv-default-color, 80%);
 
 // box-shadow
 
-@shadow-color: rgba(0, 0, 0, 0.28);
+@flv-shadow-color: rgba(0, 0, 0, 0.28);
 
 /*
   layout
 */
 
 // header
-@header-bg: @default-color;
-@header-text-color: @light;
+@flv-header-bg: @flv-default-color;
+@flv-header-text-color: @flv-light;
 
 // sider
-@sider-color: @default-color;
+@flv-sider-color: @flv-default-color;
 
 // footer 
-@footer-bg: @gray-color;
-@footer-text-color: @dark;
+@flv-footer-bg: @flv-gray-color;
+@flv-footer-text-color: @flv-dark;
 
 
+// size
+@flv-base-margin: 8px;
+@flv-base-padding: 8px;
+@flv-base-size: 100px;

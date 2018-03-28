@@ -13,14 +13,14 @@ const loginModule = {
   mutations: {
     LOGIN_SUCCESS(state, payload) {
       // console.log(payload);
-      const {data} = payload;
-      const user = Object.assign({}, data);
+      const user = Object.assign({}, payload);
       state.user = user;
+      // console.log(user);
       auth.register(user);
     },
     LOGIN_OUT(state) {
-      console.log(state);
-      state.user = {};
+      // console.log(state);
+      state.user = null;
       auth.destroy();
     }
   },
@@ -31,9 +31,9 @@ const loginModule = {
       return new Promise((resolve, reject) => {
         toLogin(user).then(response => {
           // console.log(response);
-          const data = response.data;
+          const {data, msg} = response.data;
           commit('LOGIN_SUCCESS', data);
-          resolve();
+          resolve(msg);
         }).catch(error => {
           reject(error);
         });
@@ -41,9 +41,10 @@ const loginModule = {
     },
     toLogout({commit}) {
       return new Promise((resolve, reject) => {
-        toLogout().then(() => {
+        toLogout().then((response) => {
+          const {msg} = response.data;
           commit('LOGIN_OUT');
-          resolve();
+          resolve(msg);
         }).catch(error => {
           reject(error);
         });

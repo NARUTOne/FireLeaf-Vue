@@ -16,8 +16,8 @@
     padding: 10px;
     line-height: 23px;
     text-align: center;
-    color: @footer-text-color;
-    background-color: @footer-bg;
+    color: @flv-footer-text-color;
+    background-color: @flv-footer-bg;
   }
 </style>
 
