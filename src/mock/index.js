@@ -10,5 +10,4 @@ import loginAPI from './login';
 Mock.mock(/\/api\/login/, 'post', loginAPI.toLogin);
 Mock.mock(/\/api\/logout/, 'get', loginAPI.toLogout);
 
-
 export default Mock;

@@ -6,8 +6,6 @@ import xhr from 'utils/xhr';
 
 export function toLogin (data) {
   // console.log(data);
-  
-
   return xhr({
     url: 'api/login',
     type: 'POST',
