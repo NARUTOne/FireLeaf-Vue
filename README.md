@@ -1,6 +1,8 @@
 # FireLeaf-Vue-Scaffold
 > :fallen_leaf: Vue简易脚手架
 
+**项目示例**: [FLeaf-vue-admin](https://github.com/NARUTOne/FLeaf-vue-admin)
+
 独立的前端代码包，接通数据源后（`src/utils/config.js`）即可本地运行，放置服务器后端环境下即可部署
 
 ## 安装
