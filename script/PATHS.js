@@ -11,7 +11,8 @@ module.exports = {
     assetsPublicPath: '/', // 资源path
     assetsSubDirectory: 'static', // 项目资源目录
     cssSourceMap: false,
-    devtool: 'eval-source-map'
+    devtool: 'eval-source-map',
+    proxyTable: {} // 代理api
   },
   build: {
     buildPath: path.resolve(__dirname, '../dist'), // 打包文件path 

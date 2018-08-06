@@ -21,6 +21,11 @@ xhr.getUrl = option => {
   };
 };
 
+xhr.baseData = {};
+xhr.defaultConfig = {
+  params: {t: Date.now()}
+};
+
 xhr.success = (response) => {
   const res = response.data;
   let isSuccess = true;
@@ -44,4 +49,10 @@ xhr.success = (response) => {
   }
 
   return isSuccess;
+};
+
+xhr.error = (err) => {
+  console.log(err);
+  Message.error('服务器开小差了！');
+  return err;
 };
