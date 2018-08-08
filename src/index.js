@@ -3,6 +3,7 @@
  */
 
 import Vue from 'vue';
+import App from './App';
 import router from './routers/';
 import store from './store/';
 // import iView from 'iview';
@@ -22,6 +23,8 @@ Vue.prototype.$Message = Message;
 new Vue({
   el: '#app',
   router,
-  store
+  store,
+  components: { App },
+  template: '<App/>'
 });
 

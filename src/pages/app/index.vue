@@ -1,11 +1,9 @@
 <template>
-  <div id="app">
-    <div class="wrapper">
-      <Header v-show="isHeader"/>
-      <Body><router-view></router-view></Body>
-      <Footer />
-    </div>    
-  </div>  
+  <div class="wrapper">
+    <Header v-show="isHeader"/>
+    <Body><router-view></router-view></Body>
+    <Footer />
+  </div>     
 </template>
 <script>
   import Header from './header/';
