@@ -26,9 +26,10 @@ const userMap = Mock.mock({
 
 export default {
   toLogin: config => {
+   
     const body = param2Obj(config.body);
     const {userName} = body;
-
+    console.log(body);
     return {
       code: 200,
       data: userMap[userName],

@@ -42,7 +42,7 @@
         user: 'getUser',
       }),
       isLogin () {
-        return this.user && this.user.userName;
+        return this.user && this.user.username;
       }
     },
     methods: {

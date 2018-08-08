@@ -15,7 +15,7 @@ const loginModule = {
       // console.log(payload);
       const user = Object.assign({}, payload);
       state.user = user;
-      // console.log(user);
+      console.log(user);
       auth.register(user);
     },
     LOGIN_OUT(state) {
@@ -30,8 +30,8 @@ const loginModule = {
       
       return new Promise((resolve, reject) => {
         toLogin(user).then(response => {
-          // console.log(response);
-          const {data, msg} = response.data;
+          console.log(response);
+          const {data, msg} = response;
           commit('LOGIN_SUCCESS', data);
           resolve(msg);
         }).catch(error => {

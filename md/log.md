@@ -1,6 +1,13 @@
 # 更新日志 :bug:
 
-> :fire: FireLeaf-vue-scaffold 
+> :fire: FireLeaf-vue-scaffold
+
+## 0.0.5
+
+`2018-08-08`
+
+- 开发阶段支持 `express`开发支出热加载、热更新`webpack-hot-middleware` , `webpack-dev-middleware`
+- 修复`xhr`，详情见[xhr doc](./xhr.md)
 
 ## 0.0.4
 

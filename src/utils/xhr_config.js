@@ -21,13 +21,17 @@ xhr.getUrl = option => {
   };
 };
 
-xhr.baseData = {};
+xhr.baseData = {
+  t: Date.now()
+};
+
+// 全局 配置
 xhr.defaultConfig = {
-  params: {t: Date.now()}
+  timeout: 20000
 };
 
 xhr.success = (response) => {
-  const res = response.data;
+  const res = response;
   let isSuccess = true;
   
   if (typeof res !== 'object') {

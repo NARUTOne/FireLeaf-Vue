@@ -1,6 +1,6 @@
 {
   "name": "fire-leaf-vue-scaffold",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "vue scaffold",
   "main": "index.js",
   "scripts": {
@@ -74,10 +74,12 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "eventsource-polyfill": "^0.9.6",
     "iview": "^2.11.0",
     "mockjs": "^1.0.1-beta3",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "webpack-hot-middleware": "^2.22.3"
   }
 }
