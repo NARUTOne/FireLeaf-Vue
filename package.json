@@ -75,7 +75,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "eventsource-polyfill": "^0.9.6",
-    "iview": "^2.11.0",
+    "iview": "^2.14.3",
     "mockjs": "^1.0.1-beta3",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",

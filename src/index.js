@@ -6,8 +6,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './routers/';
 import store from './store/';
-// import iView from 'iview';
-import {Message} from 'iview';
+import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import 'utils/style/theme.less';
 
@@ -16,9 +15,7 @@ import './mock/'; // simulation data
 
 Vue.config.productionTip = false;
 
-// Vue.use(iView);
-
-Vue.prototype.$Message = Message;
+Vue.use(iView);
 
 new Vue({
   el: '#app',
