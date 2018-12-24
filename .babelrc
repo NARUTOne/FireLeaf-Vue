@@ -9,10 +9,6 @@
     "stage-3"
   ],
   "plugins": [
-    ["import", {
-      "libraryName": "iview",
-      "libraryDirectory": "src/components"
-    }],
     "transform-runtime",
     "syntax-dynamic-import"    
   ]

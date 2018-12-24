@@ -22,7 +22,6 @@
 
 <script>
   import { mapGetters, mapActions } from 'vuex';
-  import {Row, Col, Avatar, Icon } from 'iview';
 
   export default {
     name: 'Header',
@@ -30,12 +29,6 @@
       return {
        
       };
-    },
-    components: {
-      Row,
-      Col,
-      Avatar,
-      Icon
     },
     computed: {
       ...mapGetters({

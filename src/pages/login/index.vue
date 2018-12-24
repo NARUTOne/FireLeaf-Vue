@@ -35,7 +35,6 @@
 
 <script>
 import { mapActions } from 'vuex';
-import {Row, Col, Form, FormItem, Input, Icon, Button} from 'iview';
 import {systemName} from 'utils/config';
 
 export default {
@@ -59,14 +58,8 @@ export default {
       }
     };
   },
-  components: {
-    Row,
-    Col,
-    Form, FormItem, Input, Icon, Button
-  },
   methods: {
     handleSubmit(name) {
-      
       this.$refs[name].validate((valid) => {
         if (valid) {
           const {userName} = this.formData;

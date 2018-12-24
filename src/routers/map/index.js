@@ -3,6 +3,7 @@
  */ 
 const App = () => import('@/pages/app/');
 const Home = () => import('@/pages/home/');
+const Test = () => import('@/pages/Test/');
 const Login = () => import('@/pages/login/');
 const NotFound = () => import('@/pages/notFound/');
 
@@ -20,6 +21,10 @@ export default [
       { 
         path: '/home', 
         component: Home
+      },
+      { 
+        path: '/test', 
+        component: Test
       },
       { 
         path: '/login', 
