@@ -2,7 +2,7 @@
  * xhr for login
  */
 
-import xhr from 'utils/xhr';
+import xhr from 'axhr';
 
 export function toLogin (data) {
   // console.log(data);

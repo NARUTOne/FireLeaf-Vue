@@ -1,4 +1,4 @@
-import xhr from './xhr';
+import xhr from 'axhr';
 import router from '@/routers/';
 import {Message} from 'iview';
 import auth from './auth';

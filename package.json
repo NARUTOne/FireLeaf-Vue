@@ -73,6 +73,7 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
+    "axhr": "^0.1.0",
     "axios": "^0.18.0",
     "eventsource-polyfill": "^0.9.6",
     "iview": "^2.11.0",
