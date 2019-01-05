@@ -1,5 +1,5 @@
-# FireLeaf-Vue-Scaffold
-> :fallen_leaf: Vue简易脚手架
+# FireLeaf-Vue
+> :fallen_leaf: Vue简易模板
 
 **项目示例**: [FLeaf-vue-admin](https://github.com/NARUTOne/FLeaf-vue-admin)
 
