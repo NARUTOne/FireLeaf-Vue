@@ -58,14 +58,13 @@
 <style lang="less" >
   @import '~utils/style/common.less';
   .wrapper {
-    animation: wrapper--fade .25s cubic-bezier(.455,.03,.515,.955);
+    animation: wrapper--fade .25s cubic-bezier(.455, .03, .515, .955);
     min-height: 100vh;
     width: 100%;
-    display:-webkit-flex;
-    display:flex;
-    -webkit-flex-direction:column;
-    flex-direction:column;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
     flex: 1;
   }
   @keyframes wrapper--fade {
