@@ -1,7 +1,0 @@
-/**
- * vuex mutations
- */
-
-export {
-
-};

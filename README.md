@@ -1,40 +1,29 @@
-# FireLeaf-Vue
-> :fallen_leaf: Vue简易模板  :rocket: V1.0
+# vue-scffold
 
-**项目示例**: [FLeaf-vue-admin](https://github.com/NARUTOne/FLeaf-vue-admin)
-
-独立的前端代码包，接通数据源后（`src/utils/config.js`）即可本地运行，放置服务器后端环境下即可部署
-
-## 安装
-
-```sh
-$ git clone </path/to/repository>
-
-$ cd repository
-
-$ npm install
+## Project setup
+```
+yarn install
 ```
 
-## 本地开发环境运行
-
-```sh
-$ npm start 
-
-或
-
-$ npm start -p [port]
+### Compiles and hot-reloads for development
+```
+yarn serve
 ```
 
-## 打包发布
-
-```sh
-$ npm run build
+### Compiles and minifies for production
+```
+yarn build
 ```
 
-## 小记
+### Run your unit tests
+```
+yarn test:unit
+```
 
-- **搭建记录**: [scaffold record](./md/record.md)
+### Lints and fixes files
+```
+yarn lint
+```
 
-## Log
-
-[LOG](./md/log.md)
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

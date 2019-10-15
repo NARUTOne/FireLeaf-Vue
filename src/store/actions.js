@@ -1,7 +1,0 @@
-/**
- * vuex actions
- */
-
-export {
-  
-};
