@@ -1,5 +1,5 @@
 # FireLeaf-Vue
-> :fallen_leaf: Vue简易模板
+> :fallen_leaf: Vue简易模板  :rocket: V1.0
 
 **项目示例**: [FLeaf-vue-admin](https://github.com/NARUTOne/FLeaf-vue-admin)
 
