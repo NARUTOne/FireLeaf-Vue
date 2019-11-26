@@ -13,7 +13,7 @@
     "allowJs": true, // 允许编译javascript文件
     "sourceMap": true,    
     "noImplicitThis": false, // 忽略 this 的类型检查, Raise error on this expressions with an implied any type.
-    "baseUrl": ".",    
+    "baseUrl": "./",    
     "pretty": true, // 给错误和消息设置样式，使用颜色和上下文。
     "types": [
       "webpack-env",

@@ -8,6 +8,11 @@ import "@/utils/xhr.config";
 import "@/style/index.scss";
 
 import {
+  Container,
+  Header,
+  Aside,
+  Main,
+  Footer,
   Dialog,
   Form,
   FormItem,
@@ -30,6 +35,11 @@ import {
 import CollapseTransition from "element-ui/lib/transitions/collapse-transition";
 
 // 按需引用 element 组件
+Vue.component(Container.name, Container);
+Vue.component(Header.name, Header);
+Vue.component(Aside.name, Aside);
+Vue.component(Main.name, Main);
+Vue.component(Footer.name, Footer);
 Vue.component(Dialog.name, Dialog);
 Vue.component(Form.name, Form);
 Vue.component(FormItem.name, FormItem);

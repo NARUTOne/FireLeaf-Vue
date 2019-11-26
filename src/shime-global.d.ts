@@ -9,3 +9,4 @@ declare module "element-ui/lib/transitions/collapse-transition";
 declare module "element-ui";
 declare module "axhr";
 declare module "flo-utils";
+declare module "enquire-js";
