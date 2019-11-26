@@ -1,0 +1,40 @@
+/* 改变主题色变量 */
+// $--color-primary: teal;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+
+/*
+* scss 全局变量
+*/
+
+// color
+$ant-layout-bg: #f0f1f5;
+$default-color: #0f89df;
+$success-color: #34a853;
+$warn-color: #fbbc05;
+$error-color: #ea4335;
+$disabled-color: #ccc;
+$gray-color: #f0f2f5;
+$dark: #001529;
+$light: rgba(255, 255, 255, .9);
+
+// 文字背景
+$text-color: #333;
+$text-bg:       #3898f0;
+$link-color: #3898f0;
+$link-hover-color: $default-color;
+
+// 默认色渐变
+$grad-color:    fade($default-color, 50%);
+$grad-m-color:  fade($default-color, 80%);
+
+// box-shadow
+$border-color: #e5e5e5;
+$shadow-color: rgba(0, 0, 0, .3);
+
+// size
+$border-radius: 3px;

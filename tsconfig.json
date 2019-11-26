@@ -1,24 +1,20 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "esnext", // 编译输出目标 ES 版本
+    "module": "esnext", // 采用的模块系统
     "strict": true,
     "jsx": "preserve",
-    "importHelpers": true,
+    "importHelpers": true, // 从 tslib 导入外部帮助库: 比如__extends，__rest等
     "moduleResolution": "node",
-    "experimentalDecorators": true,
+    "experimentalDecorators": true, // 启用装饰器
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    // 定义一个变量就必须给它一个初始值
-    "strictPropertyInitialization" : false,
-    // 允许编译javascript文件
-    "allowJs": true,
-    "sourceMap": true,
-    // 忽略 this 的类型检查, Raise error on this expressions with an implied any type.
-    "noImplicitThis": false,
-    "baseUrl": ".",
-    // 给错误和消息设置样式，使用颜色和上下文。
-    "pretty": true,
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入
+    "strictPropertyInitialization" : false, // 定义一个变量就必须给它一个初始值
+    "allowJs": true, // 允许编译javascript文件
+    "sourceMap": true,    
+    "noImplicitThis": false, // 忽略 this 的类型检查, Raise error on this expressions with an implied any type.
+    "baseUrl": ".",    
+    "pretty": true, // 给错误和消息设置样式，使用颜色和上下文。
     "types": [
       "webpack-env",
       "jest"

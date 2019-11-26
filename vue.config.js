@@ -2,6 +2,7 @@
  * vue config
  * https://cli.vuejs.org/zh/config/#%E5%85%A8%E5%B1%80-cli-%E9%85%8D%E7%BD%AE
  */
+const path = require("path");
 const config = require("./config/index");
 
 const NODE_ENV = process.env.NODE_ENV || "development";
@@ -10,7 +11,10 @@ module.exports = {
   devServer: {
     port: config.dev.host || "8080",
     host: config.dev.domain || "localhost",
-    proxy: config.dev.proxyTable
+    proxy: config.dev.proxyTable,
+    https: false,
+    hotOnly: false,
+    before: app => {}
   },
   productionSourceMap: NODE_ENV === "development",
   configureWebpack: config => {
