@@ -1,0 +1,15 @@
+/*通用类*/
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clear-float {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

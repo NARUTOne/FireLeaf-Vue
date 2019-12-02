@@ -8,7 +8,7 @@
 import { Vue, Component } from "vue-property-decorator";
 
 @Component
-export default class Footer extends Vue {
+export default class FFooter extends Vue {
   private year: number = 2019;
 
   mounted ():void {
