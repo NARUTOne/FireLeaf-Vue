@@ -1,6 +1,6 @@
 <template>
   <Footer>
-    Copyright©{{year}}Corporation All Rights Reserved
+    FLY's blog ©{{year}} create by NARUTOne
   </Footer>
 </template>
 

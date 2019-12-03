@@ -29,7 +29,8 @@
 
 <script lang="ts">
   import { Vue, Component, Prop, Watch, Emit } from "vue-property-decorator";
-  import NavMenu, {INavs} from "./NavMenu.vue";
+  import NavMenu from "./NavMenu.vue";
+  import {INavs} from "@/mock/nav";
 
   @Component({
     components: {

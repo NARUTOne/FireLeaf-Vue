@@ -1,31 +1,26 @@
 import Vue from "vue";
-import Vuex from "vuex";
-// import * as types from "./types";
+import Vuex, {StoreOptions} from "vuex";
+import {IMobile, RootState} from "./types";
 import user from "./modules/user";
 
 Vue.use(Vuex);
-const initPageState = () => {
-  return {
-    // user: {
-    //   username: "",
-    //   password: ""
-    // }
-  };
+
+const initPageState: RootState = {
+  mobile: false
 };
-const store = new Vuex.Store({
+
+const store: StoreOptions<RootState> = {
   strict: process.env.NODE_ENV !== "production",
   modules: {
     user
   },
-  state: initPageState(),
+  state: initPageState,
   mutations: {
-    // [types.SET_USER](state, pageState = {}) {
-    //   for (const prop in pageState) {
-    //     state[prop] = pageState[prop];
-    //   }
-    // }
+    handleMobileChange (state, payload: IMobile) {
+      state.mobile = payload.mobile;
+    }
   },
   actions: {}
-});
+};
 
-export default store;
+export default new Vuex.Store<RootState>(store);

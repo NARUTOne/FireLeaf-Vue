@@ -1,21 +1,24 @@
-import * as types from "../types";
+import { Module } from 'vuex';
+import {
+  RootState,
+  UserState,
+  SAVE_USER
+} from "../types";
 
-const initPageState = () => {
-  return {
-    userInfo: {
-      _id: "",
-      name: "",
-      avatar: ""
-    }
-  };
-};
-const user = {
-  state: initPageState(),
+const initPageState: UserState = {
+  id: "",
+  name: "",
+  avatar: ""
+}
+
+const user: Module<UserState, RootState> = {
+  state: initPageState,
   mutations: {
-    [types.SAVE_USER](state: object | any, pageState: object | any) {
-      for (const prop in pageState) {
-        state[prop] = pageState[prop];
-      }
+    [SAVE_USER](state, payload: UserState) {
+      const {id, name, avatar} = payload;
+      state.id = id;
+      state.name = name;
+      state.avatar = avatar;
     }
   },
   actions: {}

@@ -4,7 +4,7 @@ import Router from "vue-router";
 Vue.use(Router);
 
 const Home = () => import(/* webpackChunkName: "home" */ "./views/Home/index.vue");
-const App = () => import(/* webpackChunkName: "app" */ "./views/App/index.vue");
+const Layout = () => import(/* webpackChunkName: "app" */ "./views/Layout/index.vue");
 const About = () => import(/* webpackChunkName: "about" */ "./views/About/index.vue");
 const Articles = () => import(/* webpackChunkName: "articles" */ "./views/Articles/index.vue");
 const Log = () => import(/* webpackChunkName: "log" */ "./views/Log/index.vue");
@@ -27,7 +27,7 @@ const viewRouter =  new Router({
     {
       path: "/blog",
       name: "app",
-      component: App,
+      component: Layout,
       redirect: '/blog/log',
       children: [
         {

@@ -24,14 +24,7 @@
 
 <script lang="ts">
   import { Vue, Component, Prop, Watch, Emit } from "vue-property-decorator";
-
-  export interface INavs {
-    icon: string;
-    title: string;
-    href: string;
-    name: string;
-    children: Array<INavs>;
-  }
+  import {INavs} from "@/mock/nav";
 
   @Component
   export default class NavMenu extends Vue {

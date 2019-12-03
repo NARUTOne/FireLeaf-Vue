@@ -13,24 +13,31 @@ import {
   Aside,
   Main,
   Footer,
-  Dialog,
+  Avatar,
+
+  Row,
+  Col,
+  Timeline,
+  TimelineItem,
+  Card,
+  Tag,
+
   Form,
   FormItem,
   Input,
   Button,
+
   Message,
+  Dialog,
+
   Menu,
   MenuItem,
-  Row,
-  Col,
   Dropdown,
   DropdownMenu,
   DropdownItem,
+
   Loading,
-  Timeline,
-  TimelineItem,
-  Card,
-  Tag
+  BackTop
 } from "element-ui";
 import CollapseTransition from "element-ui/lib/transitions/collapse-transition";
 
@@ -40,6 +47,7 @@ Vue.component(Header.name, Header);
 Vue.component(Aside.name, Aside);
 Vue.component(Main.name, Main);
 Vue.component(Footer.name, Footer);
+Vue.component(Avatar.name, Avatar);
 Vue.component(Dialog.name, Dialog);
 Vue.component(Form.name, Form);
 Vue.component(FormItem.name, FormItem);
@@ -58,6 +66,8 @@ Vue.component(Timeline.name, Timeline);
 Vue.component(TimelineItem.name, TimelineItem);
 Vue.component(Card.name, Card);
 Vue.component(Tag.name, Tag);
+Vue.component(BackTop.name, BackTop);
+
 Vue.use(Loading.directive);
 Vue.prototype.$message = Message;
 Vue.prototype.$loading = Loading.service;
